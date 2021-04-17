@@ -1,8 +1,5 @@
 public class FirstClass {
     public static void main(String[] args) {
-        String example = "Hello from First Class!";
-        System.out.println(example);
-
         Notebook notebook= new Notebook("600g", 900, 2021);
         System.out.println(notebook.weight + " " + notebook.price);
         notebook.checkPrice();
