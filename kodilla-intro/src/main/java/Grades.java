@@ -3,9 +3,6 @@ import java.util.Arrays;
 public class Grades {
     private int[] grades;
     private int size;
-    private int lastGrade;
-    private double averageGrade;
-    private double sumGrades;
 
     public Grades() {
         this.grades = new int[10];
@@ -21,13 +18,13 @@ public class Grades {
     }
 
     public void last() {
-        lastGrade = grades[size-1];
+        int lastGrade = grades[size-1];
         System.out.println(lastGrade);
     }
 
     public void average(){
-        sumGrades = (Arrays.stream(grades).sum());
-        averageGrade = sumGrades/size;
+        double sumGrades = (Arrays.stream(grades).sum());
+        double averageGrade = sumGrades/size;
         System.out.println(averageGrade);
     }
 }
