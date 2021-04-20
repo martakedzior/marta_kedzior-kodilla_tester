@@ -1,8 +1,8 @@
 public class Notebook {
-    private String weight;
-    private int price;
-    private int weightInt;
-    private int year;
+    String weight;
+    int price;
+    int weightInt;
+    int year;
 
     public Notebook(String weight, int price, int year){
         this.weight = weight;
