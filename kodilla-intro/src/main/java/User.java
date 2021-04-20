@@ -18,7 +18,7 @@ public class User {
 
         double ageSumm = 0;
 
-        for(int i=0; i<users.length; i++){
+        for(int i=0; i < users.length; i++){
             ageSumm = users[i].age + ageSumm;
         }
 
