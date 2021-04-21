@@ -1,14 +1,22 @@
 public class Notebook {
-    String weight;
-    int price;
-    int weightInt;
-    int year;
+    private String weight;
+    private int price;
+    private int weightInt;
+    private int year;
 
     public Notebook(String weight, int price, int year){
         this.weight = weight;
         this.price = price;
         this.weightInt = Integer.parseInt(weight.replace("g",""));
         this.year = year;
+    }
+
+    public String getWeight(){
+        return weight;
+    }
+
+    public int getPrice(){
+        return price;
     }
 
     public void checkPrice(){
@@ -38,4 +46,5 @@ public class Notebook {
             System.out.println("This notebook is expensive and modern!");
         }
     }
+
 }
