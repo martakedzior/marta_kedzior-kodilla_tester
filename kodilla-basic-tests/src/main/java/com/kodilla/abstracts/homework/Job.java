@@ -13,6 +13,8 @@ public abstract class Job {
         return salary;
     }
 
-    public abstract String getResponsibilities();
+    public String getResponsibilities() {
+        return responsibilities;
+    }
 
 }
