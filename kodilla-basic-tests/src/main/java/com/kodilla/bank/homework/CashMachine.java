@@ -1,16 +1,13 @@
 package com.kodilla.bank.homework;
-
 import java.util.Arrays;
 
 public class CashMachine {
-    private double[] transactions;
+    double[] transactions;
     private double balance;
     private int size;
 
-    public CashMachine() {
-        this.balance = 0;
-        this.size = 0;
-        this.transactions = new double[0];
+    public CashMachine(double[] transactions) {
+        this.transactions = transactions;
     }
 
     public void add(int value) {
@@ -21,6 +18,10 @@ public class CashMachine {
         this.transactions = newTab;
     }
 
+    public int getNumberOfTransactions() {
+        return transactions.length;
+    }
+
     public double[] getTransactions(){
         return transactions;
     }
@@ -29,15 +30,43 @@ public class CashMachine {
         return balance = Arrays.stream(transactions).sum();
     }
 
-    public int getNumberOfTransactions(){
-        return transactions.length;
+    public int getWithdrawalNumber() {
+        int number = 0;
+        for (int i = 0; i < this.getNumberOfTransactions(); i++) {
+            if (this.transactions[i] < 0) {
+                number++;
+            }
+        }
+        return number;
     }
 
-    public double getAverage() {
-        double sum = 0;
-        for (int i = 0; i < this.transactions.length; i++) {
-            sum += this.transactions[i];
+    public double getDepositNumber() {
+        int number = 0;
+        for (int i = 0; i < this.getNumberOfTransactions(); i++) {
+            if (this.transactions[i] > 0) {
+                number++;
+            }
         }
-        return sum/this.transactions.length;
+        return number;
+    }
+
+    public double getWithdrawalSum() {
+        double sum = 0;
+        for (int i = 0; i < this.getNumberOfTransactions(); i++) {
+            if (this.transactions[i] < 0) {
+                sum += this.transactions[i];
+            }
+        }
+        return sum;
+    }
+
+    public double getDepositSum() {
+        double sum = 0;
+        for (int i = 0; i < this.getNumberOfTransactions(); i++) {
+            if (this.transactions[i] > 0) {
+                sum += this.transactions[i];
+            }
+        }
+        return sum;
     }
 }
