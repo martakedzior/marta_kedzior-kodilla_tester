@@ -5,20 +5,17 @@ import java.util.List;
 
 public class BookManager {
 
-    List<Book> booksList = new ArrayList<>();
+    public static List<Book> booksList = new ArrayList<>();
 
-    public  Book createBook(String title, String author){
+    public  static Book createBook(String title, String author){
 
         Book book = new Book(title, author);
 
-        booksList.add(book);
-        System.out.println("Book added: " + booksList );
-
         if (booksList.contains(book)) {
             System.out.println("Taka ksiazka już istnieje.");
-        }else{
+        } else {
             booksList.add(book);
-            System.out.println("Dodaję ksiązkę" + book.getAuthor());
+            System.out.println("Dodaję ksiązkę " + book.getAuthor() + " " + book.getTitle());
         }
 
 //        for(Book item : booksList){
