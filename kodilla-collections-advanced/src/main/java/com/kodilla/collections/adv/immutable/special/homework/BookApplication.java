@@ -13,5 +13,6 @@ public class BookApplication {
         System.out.println(book1.equals(book3));
         System.out.println(book1.equals(book2));
 
+        BookManager.getNumberOfBooks();
     }
 }

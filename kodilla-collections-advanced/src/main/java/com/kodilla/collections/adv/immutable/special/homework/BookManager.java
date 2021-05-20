@@ -17,19 +17,10 @@ public class BookManager {
             booksList.add(book);
             System.out.println("Dodaję ksiązkę " + book.getAuthor() + " " + book.getTitle());
         }
-
-//        for(Book item : booksList){
-//            if (item.equals(book)){
-//                System.out.println("Taka ksiazka już istnieje.");
-//            }else {
-//                booksList.add(book);
-//                System.out.println("Dodaję ksiązkę" + book.getAuthor());
-//            }
-//        }
         return book;
     }
 
-    public void getNumberOfBooks() {
+    public static void getNumberOfBooks() {
         System.out.println(booksList.size());
     }
 
