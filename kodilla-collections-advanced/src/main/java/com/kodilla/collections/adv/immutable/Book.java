@@ -1,8 +1,8 @@
 package com.kodilla.collections.adv.immutable;
 
 public class Book {
-    protected final String author;
-    protected final String title;
+    private final String author;
+    private final String title;
 
     public Book(String author, String title) {
         this.author = author;
