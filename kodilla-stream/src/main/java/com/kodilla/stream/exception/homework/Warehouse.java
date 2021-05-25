@@ -6,9 +6,8 @@ import java.util.List;
 public class Warehouse {
     private List<Order> orderList  = new ArrayList<>();
 
-    public List<Order> addOrder(Order order) {
+    public void addOrder(Order order) {
         orderList.add(order);
-        return orderList;
     }
 
     public Order getOrder(String number) throws OrderDoesntExistException {

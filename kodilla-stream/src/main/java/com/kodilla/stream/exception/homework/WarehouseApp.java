@@ -7,7 +7,6 @@ public class WarehouseApp {
 
         try {
             warehouse.getOrder("4");
-            throw new OrderDoesntExistException();
         } catch (OrderDoesntExistException e) {
             System.out.println("Order doesn't exist.");
         }
