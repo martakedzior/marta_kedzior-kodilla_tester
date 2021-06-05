@@ -1,6 +1,7 @@
 package com.kodilla.parametrized_tests.homework;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import java.util.HashSet;
@@ -14,7 +15,6 @@ class GamblingMachineTestSuite {
     @ParameterizedTest
     @CsvFileSource(resources = "/gamblingMachine.csv", numLinesToSkip = 1, delimiter = ',')
     public void shouldReturnTrueWhenSetOfNumbersGeneratedProperly(int one, int two, int three, int four, int five, int six) throws InvalidNumbersException {
-
         Set<Integer> validSets = new HashSet<>();
         validSets.add(one);
         validSets.add(two);
@@ -44,12 +44,17 @@ class GamblingMachineTestSuite {
     @ParameterizedTest
     @CsvFileSource(resources = "/gamblingMachine2.csv", numLinesToSkip = 0)
     public void shouldThrowExceptionIfInputNumbersAreIncorrect (String inputLine) throws InvalidNumbersException{
-        GamblingMachine gamblingMachine = new GamblingMachine();
-        String tempTab[] = inputLine.split(" ");
+        String[] tempTab = inputLine.split(" ");
         Set<Integer> inputNumbers = new HashSet<>();
-        for (String tabElement : tempTab)
-            inputNumbers.add(Integer.parseInt(tabElement));
+        for (String element : tempTab)
+            inputNumbers.add(Integer.parseInt(element));
         assertThrows(InvalidNumbersException.class, () -> gamblingMachine.howManyWins(inputNumbers));
+    }
+
+    // test po staremu
+    @Test
+    public void testThrowException() throws InvalidNumbersException {
+        gamblingMachine.howManyWins(Set.of(1,2,3,4,5,6));
     }
 
 }
