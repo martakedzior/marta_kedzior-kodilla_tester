@@ -13,6 +13,11 @@ public class TaskManager {
                 .collect(Collectors.toList());
         System.out.println("Tasks deadlines ->>> " + tasknames);
 
+        List<Task> tasknames2 = TaskRepository.getTasks()
+                .stream()
+                .filter(t -> t.getDeadline().isAfter(LocalDate.now()))
+                .collect(Collectors.toList());
+        tasknames2.forEach(task -> System.out.println(task.getName() + " " + task.getDeadline()));
     }
 
     public static String getTaskName(Task task) {
