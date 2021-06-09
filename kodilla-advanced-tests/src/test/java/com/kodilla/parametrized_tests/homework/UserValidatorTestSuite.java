@@ -10,7 +10,7 @@ class UserValidatorTestSuite {
     private UserValidator userValidator = new UserValidator();
 
     @ParameterizedTest
-    @ValueSource(strings = {"test", "Marta-Kowalska", "AnnaNowak79", "Anna_Nowak_79", "Anna.Nowak "})
+    @ValueSource(strings = {"test", "Marta-Kowalska", "AnnaNowak79", "Anna_Nowak_79", "Anna.Nowak"})
     public void shouldReturnTrueIfUserNameIsValid(String text){
         boolean result = userValidator.validateUsername(text);
         assertTrue(result);
