@@ -1,0 +1,17 @@
+INSERT INTO POSTS (USER_ID, BODY)
+VALUES (3, "NEW POST ADDED!");
+
+UPDATE POSTS
+SET BODY = "To delete"
+WHERE ID = 9;
+
+Select * from POSTS;
+
+COMMIT;
+
+DELETE FROM POSTS
+ WHERE ID = 9;
+
+COMMIT;
+
+Select * from POSTS;
