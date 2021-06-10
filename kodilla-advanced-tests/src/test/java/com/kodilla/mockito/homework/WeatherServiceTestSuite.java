@@ -1,9 +1,5 @@
 package com.kodilla.mockito.homework;
 
-import com.kodilla.mockito.Client;
-import com.kodilla.mockito.Location;
-import com.kodilla.mockito.WeatherNotification;
-import com.kodilla.mockito.WeatherService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
