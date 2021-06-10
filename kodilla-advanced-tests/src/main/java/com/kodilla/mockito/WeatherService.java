@@ -1,6 +1,4 @@
-package com.kodilla.mockito.homework;
-
-import com.kodilla.mockito.Notification;
+package com.kodilla.mockito;
 
 import java.util.HashMap;
 import java.util.HashSet;
