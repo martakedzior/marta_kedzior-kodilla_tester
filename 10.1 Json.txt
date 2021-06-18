@@ -1,0 +1,23 @@
+{
+   "carname": "Car1",
+   "carbrand": "Peugeot",
+   "carseats":{
+      "seat1":[
+         "material1",
+         "colour1"
+      ],
+      "seat2":[
+         "material2",
+         "colour2"
+      ],
+      "seat3":[
+         "material3",
+         "colour3"
+      ],
+      "seat4":[
+         "material4",
+         "colour4"
+      ]
+   },
+    "engine": "1000"
+}
