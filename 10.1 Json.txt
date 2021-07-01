@@ -2,21 +2,21 @@
    "carname": "Car1",
    "carbrand": "Peugeot",
    "carseats":[
-      {"seat1":
-         "material1",
-         "colour1"
+      {
+         "material": "material1",
+         "colour": "blue"
       },
-      {"seat2":
-         "material2",
-         "colour2"
+      {
+         "material": "material2",
+         "colour": "red"
       },
-      {"seat3":
-         "material3",
-         "colour3"
+      {
+         "material3": "material3",
+         "colour3": "black"
       },
-      {"seat4":
-         "material4",
-         "colour4"
+      {
+         "material4": "material4",
+         "colour4": "yellow"
       }
    },
     "engine": "1000"
