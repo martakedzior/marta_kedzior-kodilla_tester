@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UFT-8"?>
+<Car name="car">
+  <Brand>Peugeot</Brand>
+  <Model>107</Model>
+  <ProductionDate>1999-10-20</ProductionDate>
+  <Country>France</Country>
+</Car>
