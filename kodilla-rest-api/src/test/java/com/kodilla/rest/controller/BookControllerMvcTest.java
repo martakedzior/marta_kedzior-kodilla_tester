@@ -42,4 +42,5 @@ public class BookControllerMvcTest {
                 .andExpect(MockMvcResultMatchers.status().is(200))                     // [2]
                 .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(2)));
     }
+
 }
