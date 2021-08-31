@@ -12,6 +12,7 @@ public class GoogleExample {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
 
+
         WebElement inputField = driver.findElement(By.name("q"));
         inputField.sendKeys("Kodilla");
         inputField.submit();
