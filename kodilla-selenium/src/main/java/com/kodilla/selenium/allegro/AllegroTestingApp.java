@@ -22,7 +22,7 @@ public class AllegroTestingApp {
         WebElement linkElectronics = driver.findElement(By.xpath("//div[@data-group-id='departments_Elektronika']/a"));
         linkElectronics.click();
 
-        WebElement inputField = driver.findElement(By.xpath("//html/body/div/div/header/div/div/div/div/form/input"));
+        WebElement inputField = driver.findElement(By.xpath("//div[@data-box-name='allegro.metrumHeader.search']/div/form/input"));
         inputField.sendKeys("Mavic mini");
         inputField.submit();
         driver.quit();
