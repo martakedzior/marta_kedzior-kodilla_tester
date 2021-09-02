@@ -8,7 +8,7 @@ import java.util.Random;
 public class GoogleRandomResult {
     WebElement googleRandomResult;
 
-    public void drawResult(GoogleResults googleResults) {
+    public void googleResult(GoogleResults googleResults) {
         Random rand = new Random();
         int randomInt = rand.nextInt(googleResults.getResults().size()-1);
         googleRandomResult = googleResults.getResults().get(randomInt);

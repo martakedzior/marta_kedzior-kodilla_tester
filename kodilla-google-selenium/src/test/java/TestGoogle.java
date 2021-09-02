@@ -31,10 +31,10 @@ public class TestGoogle {
     }
 
     @Test
-    public void testDrawResult() {
+    public void testGoogleResult() {
         GoogleSearch googleSearch = new GoogleSearch(driver);
         GoogleRandomResult googleRandomResult = new GoogleRandomResult();
         googleSearch.searchResults();
-        googleRandomResult.drawResult(googleSearch.getGoogleResults());
+        googleRandomResult.googleResult(googleSearch.getGoogleResults());
     }
 }
